@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto+Condensed&display=swap');
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    padding: 30px 0px 50px 0px;
+    margin: 0px;
+    background-color: white;
+    border-bottom: 5px solid black;
+}
+
+.leftNav {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+}
+
+.rightNav {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: white;
+  text-align: center;
+  padding: 32px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: yellow;
+}
+
+/* Add a color to the active/current link */
+.topnav a.home {
+  background-color: black;
+}
+
+.topnav a.action {
+  background-color: #BF0A30;
+}
+
+.topnav a.testimonials {
+  background-color: #0000FF;
+}
+
+.hero-image1 {
+  background-image: url("homeHeroImg.jpeg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: 5px solid black;
+}
+
+.hero-image2 {
+  background-image: url("actionHeroImg.jpeg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: 5px solid black;
+}
+
+.hero-image3 {
+  background-image: url("testimonialsHeroImg.jpeg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: 5px solid black;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: inline-block;
+  border: 5px solid black;
+  transform: translate(-50%, -50%);
+  padding: 1px 40px;
+  background-color: white;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  font-family: 'Noto Sans JP', sans-serif;
+  position: relative;
+  max-width: 1200px;
+  top: 60px;
+  margin: 0 auto;
+}
+
+/* Vertical Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Circles */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent red;
+}
+
+/* Fix the circle for containers on the right side */
+.left::after {
+  border-color: red;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent blue transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+  border-color: blue;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  position: relative;
+  top: 115px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 45%;
+  height: 240px;
+  padding-left: 20px;
+  border: 5px solid black;
+}
+
+.block1 {
+  position: relative;
+  left: 30px;
+  background-image: url("march4OL.avif");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.block2 {
+  position: relative;
+  right: 30px;
+  background-image: url("shp.webp");
+  background-size: cover;
+  background-position: 50% 65%;
+}
+
+.block3 {
+  position: relative;
+  left: 30px;
+  background-image: url("amnesty.jpeg");
+  background-size: cover;
+  background-position: 50% 45%;
+}
+
+.block4 {
+  position: relative;
+  right: 30px;
+  background-image: url("everytown.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.block a:link, a:visited {
+  background-color: red;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.block a:hover, a:active {
+  background-color: blue;
+}
+
+h4 {
+  text-align: center;
+  background: rgba(255, 0, 0, .7);
+  color: white;
+  font-size: 200%;
+}
+
+.april {
+  position: relative;
+  top: 75px;
+}
+
+.josh {
+  position: relative;
+  top: 75px;
+}
+
+.dana {
+  position: relative;
+  top: 75px;
+}
+
+.container3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blockSet {
+  width: 45%;
+  height: 400px;
+  padding-left: 20px;
+}
+
+.block5 {
+  background-image: url("april.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  left: 30px;
+  top: 80px;
+  border: 5px solid blue;
+}
+
+.block6 {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 15px;
+  overflow: scroll;
+  position: relative;
+  right: 30px;
+  top: 80px;
+  border: 5px solid red;
+}
+
+.block7 {
+  background-image: url("josh.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  left: 30px;
+  top: 80px;
+  border: 5px solid blue;
+}
+
+.block8 {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 15px;
+  overflow: scroll;
+  position: relative;
+  right: 30px;
+  top: 80px;
+  border: 5px solid red;
+}
+
+.block9 {
+  background-image: url("dana.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  position: relative;
+  left: 30px;
+  top: 80px;
+  border: 5px solid blue;
+}
+
+.block10 {
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 15px;
+  height: 650px;
+  overflow: scroll;
+  position: relative;
+  right: 30px;
+  top: 80px;
+  border: 5px solid red;
+}
