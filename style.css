@@ -259,7 +259,7 @@ body, html {
 .block1 {
   position: relative;
   left: 30px;
-  background-image: url("march4OL.avif");
+  background-image: url("march4OL.jpg");
   background-size: cover;
   background-position: bottom;
 }
@@ -267,12 +267,13 @@ body, html {
 .block2 {
   position: relative;
   right: 30px;
-  background-image: url("shp.webp");
+  background-image: url("shp.jpg");
   background-size: cover;
   background-position: 50% 65%;
 }
 
 .block3 {
+  margin: 30px 0px 30px 0px;
   position: relative;
   left: 30px;
   background-image: url("amnesty.jpeg");
@@ -281,6 +282,7 @@ body, html {
 }
 
 .block4 {
+  margin: 30px 0px 30px 0px;
   position: relative;
   right: 30px;
   background-image: url("everytown.jpeg");
@@ -305,10 +307,13 @@ body, html {
 }
 
 h4 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 0, 0, .7);
   color: white;
   font-size: 200%;
+  height: 65px;
 }
 
 .april {
@@ -343,7 +348,7 @@ h4 {
   background-position: bottom;
   position: relative;
   left: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid blue;
 }
 
@@ -353,7 +358,7 @@ h4 {
   overflow: scroll;
   position: relative;
   right: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid red;
 }
 
@@ -363,7 +368,7 @@ h4 {
   background-position: center;
   position: relative;
   left: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid blue;
 }
 
@@ -373,7 +378,7 @@ h4 {
   overflow: scroll;
   position: relative;
   right: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid red;
 }
 
@@ -384,7 +389,7 @@ h4 {
   height: 650px;
   position: relative;
   left: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid blue;
 }
 
@@ -395,6 +400,6 @@ h4 {
   overflow: scroll;
   position: relative;
   right: 30px;
-  top: 80px;
+  top: 70px;
   border: 5px solid red;
 }
