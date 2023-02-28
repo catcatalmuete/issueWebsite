@@ -333,19 +333,19 @@ h4 {
 
 .container3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .blockSet {
   width: 45%;
   height: 400px;
-  padding-left: 20px;
 }
 
 .block5 {
   background-image: url("april.jpeg");
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   position: relative;
   left: 30px;
   top: 70px;
@@ -385,8 +385,9 @@ h4 {
 .block9 {
   background-image: url("dana.jpeg");
   background-size: cover;
-  background-position: center;
-  height: 650px;
+  background-position: 25% 80%;
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   left: 30px;
   top: 70px;
@@ -396,7 +397,6 @@ h4 {
 .block10 {
   font-family: 'Noto Sans JP', sans-serif;
   padding: 15px;
-  height: 650px;
   overflow: scroll;
   position: relative;
   right: 30px;
